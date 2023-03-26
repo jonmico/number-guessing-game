@@ -18,4 +18,9 @@ elif difficulty_setting == "hard":
 is_number_guessed = False
 
 while number_of_tries > 0 and not is_number_guessed:
-
+    guess = int(input("Make a guess: "))
+    if guess < random_number:
+        print("Too low.")
+        print("Guess again.")
+        number_of_tries -= 1
+        print(f"You have {number_of_tries} left.")
