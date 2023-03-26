@@ -24,3 +24,11 @@ while number_of_tries > 0 and not is_number_guessed:
         print("Guess again.")
         number_of_tries -= 1
         print(f"You have {number_of_tries} left.")
+    elif guess > random_number:
+        print("Too high.")
+        print("Guess again.")
+        number_of_tries -= 1
+        print(f"You have {number_of_tries} left.")
+    elif guess == random_number:
+        print(f"You got it! The answer was {random_number}!")
+        is_number_guessed = True
